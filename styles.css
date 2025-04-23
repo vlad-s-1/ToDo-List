@@ -1,0 +1,152 @@
+/* Общие стили */
+body {
+    background-color: #1e1e2e;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Контейнер верхней панели */
+.menuContainer {
+    background-color: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.menuContainer p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Поля ввода */
+.textInput, .dateInput {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #2c2f40;
+    color: white;
+    outline: none;
+}
+
+.textInput {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Кнопка "Add" */
+.addButton {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #ff7b00, #ff5500);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.addButton:hover {
+    background: linear-gradient(135deg, #ff5500, #ff2200);
+    transform: scale(1.05);
+}
+
+/* Контейнер списка */
+.listContainer {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+/* Карточка задачи */
+.taskContainer {
+    background: #343746;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    flex-wrap: wrap;
+}
+
+.taskContainer:hover {
+    transform: scale(1.02);
+}
+
+/* Текст задачи */
+.listTextElem {
+    font-size: 16px;
+    font-weight: bold;
+    flex: 1;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Дата задачи */
+.listDateElem {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-left: 10px;
+    width: 80px;
+    text-align: center;
+}
+
+/* Кнопка удаления */
+.deleteButton {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-left: 10px;
+}
+
+.deleteButton:hover {
+    background: linear-gradient(135deg, #cc0000, #990000);
+    transform: scale(1.1);
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 400px) {
+    .taskContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .listTextElem {
+        max-width: 100%;
+    }
+    .listDateElem {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
