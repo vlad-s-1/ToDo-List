@@ -9,4 +9,4 @@ A simple and clean To-Do List built with **HTML**, **CSS**, and **JavaScript**.
 - Responsive design for mobile devices  
 
 ## 🔧 How to Run:
-Just open `index.html` in your browser or use the link: [To do list](https://vlad-s-1.github.io/ToDo-List)
+Just open `index.html` in your browser or use the link: [To do list](https://vlad1shpota.github.io/ToDo-List)
